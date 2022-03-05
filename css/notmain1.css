@@ -1,0 +1,493 @@
+/* ------------------------------------------------------------------------------
+	Template Name: Floix
+	Author: Designstub
+	Author URI: http://www.designstub.com
+------------------------------------------------------------------------------*/
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+/* ------------------------------------------------------------------------------
+	 Typography
+-------------------------------------------------------------------------------*/
+body{
+	--dorehei:  #fcaf3b;
+}
+p {
+	font-size: 16px;
+	line-height: 22.4px;
+	color: #6c7279;
+}
+h1 {
+	font-size: 65px;
+	color: var(--dorehei);
+}
+h2 {
+	font-size: 40px;
+	color: #2d3033;
+}
+h3 {
+	font-size: 28px;
+	color: #2d3033;
+	font-weight: 300;
+}
+h4 {
+	font-size: 1.25rem;
+	color: #2d3033;
+	font-weight: 400;
+}
+h5 {
+	font-size: 14px;
+	color: #2d3033;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.btn {
+	border: 1px solid rgba(255, 255, 255, 0.75);
+    /*padding: 40px;*/
+	margin-top: 20px;
+	color: #ffffff;
+	background-color: var(--dorehei);
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	border-radius: 0px;
+	padding: 1.5% 3%;
+	display: inline-block;
+	text-transform: uppercase;
+}
+.btn:hover, .btn:focus {
+	color: white;
+}
+.btn-large {
+	padding: 15px 40px;
+}
+.iconplay{
+	width:30px;
+	height: 30px;
+}
+/* ------------------------------------------------------------------------------
+	 General Style
+-------------------------------------------------------------------------------*/
+a {
+	color: var(--dorehei);
+}
+a:hover, a:focus {
+	text-decoration: none;
+	color:black;
+	-moz-transition: background-color, color, 0.3s;
+	-o-transition: background-color, color, 0.3s;
+	-webkit-transition: background-color, color, 0.3s;
+	transition: background-color, color, 0.3s;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	color: #6c7279;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	list-style: none;
+}
+.section {
+	padding: 100px 0;
+}
+.no-padding {
+	padding: 0;
+}
+.no-gutter [class*=col-] {
+	padding-right: 0;
+	padding-left: 0;
+}
+/* ==========================================================================
+	$Header
+========================================================================== */
+#header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+#headerbtn{
+	border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 40px;
+	margin-top: 20px;
+	color: #ffffff;
+	background-color:transparent;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	border-radius: 0px;
+	padding: 1.5% 3%;
+	display: inline-block;
+	text-transform: uppercase;
+}
+#headerbtn:hover, #headerbtn:focus {
+	background-color: var(--dorehei);
+}
+#header .header-content {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 40px 0;
+	width: 100%;
+	-moz-transition: padding 0.3s;
+	-o-transition: padding 0.3s;
+	-webkit-transition: padding 0.3s;
+	transition: padding 0.3s;
+}
+#header.fixed {
+	background-color: rgba(32, 32, 32, 0.75);
+}
+#header.fixed .header-content {
+	border-bottom: 0;
+	padding: 5px 0;
+}
+#header.fixed .nav-toggle {
+	top: 18px;
+}
+.navigation.open {
+	opacity: 0.9;
+	visibility: visible;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.navigation {
+	float: right;
+}
+.navigation li {
+	display: inline-block;
+}
+.navigation a {
+	color: #9b9999;
+	font-size: 17px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-left: 40px;
+}
+.navigation a:hover, .navigation a.active {
+	color: var(--dorehei);
+}
+.nav-toggle {
+	display: none;
+	height: 44px;
+	overflow: hidden;
+	position: fixed;
+	right: 5%;
+	text-indent: 100%;
+	top: 32px;
+	white-space: nowrap;
+	width: 44px;
+	z-index: 99999;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.nav-toggle:before, .nav-toggle:after {
+	border-radius: 50%;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+}
+.nav-toggle:before {
+	background-color: var(--dorehei);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.nav-toggle:after {
+	background-color: var(--dorehei);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-moz-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+}
+.nav-toggle span {
+	background-color: #fff;
+	bottom: auto;
+	display: inline-block;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	right: auto;
+	top: 50%;
+	width: 18px;
+	z-index: 10;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.nav-toggle span:before, .nav-toggle span:after {
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transition: -moz-transform 0.3s;
+	-o-transition: -o-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.nav-toggle span:before {
+	-moz-transform: translateY(-6px) rotate(0deg);
+	-ms-transform: translateY(-6px) rotate(0deg);
+	-webkit-transform: translateY(-6px) rotate(0deg);
+	transform: translateY(-6px) rotate(0deg);
+}
+.nav-toggle span:after {
+	-moz-transform: translateY(6px) rotate(0deg);
+	-ms-transform: translateY(6px) rotate(0deg);
+	-webkit-transform: translateY(6px) rotate(0deg);
+	transform: translateY(6px) rotate(0deg);
+}
+.nav-toggle.close-nav:before {
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+.nav-toggle.close-nav:after {
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.nav-toggle.close-nav span {
+	background-color: rgba(255, 255, 255, 0);
+}
+.nav-toggle.close-nav span:before, .nav-toggle.close-nav span:after {
+	background-color: #fff;
+}
+.nav-toggle.close-nav span:before {
+	-moz-transform: translateY(0) rotate(45deg);
+	-ms-transform: translateY(0) rotate(45deg);
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+.nav-toggle.close-nav span:after {
+	-moz-transform: translateY(0) rotate(-45deg);
+	-ms-transform: translateY(0) rotate(-45deg);
+	-webkit-transform: translateY(0) rotate(-45deg);
+	transform: translateY(0) rotate(-45deg);
+}
+/* ==========================================================================
+	$Banner
+========================================================================== */
+.banner {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.603)
+		),url(../images/hei-we-speak.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 750px;
+}
+.banner-text {
+	padding-top: 25%;
+}
+.banner-text h1 {
+	color: var(--dorehei);
+	font-family: "EB Garamond";
+	font-size: 5rem;
+	font-weight: 400;
+}
+.banner-text p {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 1%;
+}
+/*===========================================================================
+ $Accueil
+ ============================================================================ */
+.linkedin img{
+    width:3vw;
+    height:6vh;
+}
+#introduction {
+	background-color:ghostwhite;
+}
+.carousel-inner{
+	width:inherit;
+	height:50vh;
+}
+
+/* ==========================================================================
+	$Teams
+========================================================================== */
+
+.intro-content {
+	margin-top: 20px;
+}
+.intro-content h1 {
+	font-size: 55px;
+	font-weight: 700;
+	letter-spacing: -3px;
+}
+.intro-content h4 {
+	font-size: 15px;
+	letter-spacing: 3px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.intro-content p {
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 19px;
+}
+.intro-content li {
+	line-height: 30px;
+	letter-spacing: 1px;
+}
+/* ------------------------------------------------------------------------------
+	 Works
+-------------------------------------------------------------------------------*/
+.card-img-top img{
+    width:150px;
+    height:150px;
+}
+
+.card-img-top{
+    background-color: var(--dorehei);
+}
+.card{
+    height:50vh;
+    text-align: center;
+    border-radius: 2vw;
+}
+
+#works h2, #works p{
+    text-align: center;
+}
+.petitrectangle{
+	width:4.5vw;
+	height:0.5vw;
+	border-radius: 10%;
+	background-color: rgb(68, 68, 68);
+}
+.card{
+    width:20vw;
+}
+.image-hei-we-speak{
+	width:640px;
+	height:50vh;
+}
+.programme .btn{
+	width:15vw;
+	height: 8vh;
+	padding:1vw 0;
+}
+.programme {
+	background-color: ghostwhite;
+}
+
+/*=================================================================================
+ Section bourses
+ =====================================================================================*/
+#bourses img{
+	width:640px;
+	height:50vh;
+}
+ /*===================================================================================
+ section nouvelles
+ =====================================================================================*/
+#news img{
+	width:20vw;
+	height:35vh;
+}
+#news h2{
+	text-align: center;
+}
+#news{
+	background-color: ghostwhite;
+}
+/*======================================================================================
+section concours
+==================================================================================*/
+#concours{
+	text-align: center;
+	background: linear-gradient(
+ rgba(0, 0, 0, 0.45), 
+ rgba(0, 0, 0, 0.45)
+ ),url(../images/avectoky\ -\ Copie.jpg);
+ background-size:cover;
+ background-repeat:no-repeat;
+
+
+	
+}
+#concours p, #concours h2{
+	color:white;
+}
+
+/* ------------------------------------------------------------------------------
+	 Footer
+-------------------------------------------------------------------------------*/
+.footer {
+	width: 100%;
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 7%;
+	background-color: rgb(32, 32, 32);
+}
+.footer h2 {
+	color: var(--dorehei);
+	letter-spacing: 2px;
+	margin: 0 0 15px 0;
+	padding: 0px;
+}
+.footer p {
+	color: #6c7279;
+}
+.footer .footer-share li {
+	display: inline-block;
+	float: none;
+}
+.footer .footer-share a {
+	border: none;
+	font-size: 30px;
+	color: rgb(247, 241, 241);
+	letter-spacing: 15px;
+}
